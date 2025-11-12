@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
-    gap: 400px;
+    gap: 60px;
     align-items: start;
     margin-top: 40px;
 }
@@ -51,8 +51,9 @@
 .favorites-drop {
     display: grid;
     grid-template-rows: repeat(5, auto);
-    gap: 15px;
     justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .card,
@@ -63,9 +64,9 @@
     cursor: grab;
 }
 
-.card img {
-    width: 300px;
-    height: 180px;
+.img-album {
+    width: 200px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -74,8 +75,8 @@
     border: 2px dashed #aaa;
     border-radius: 8px;
     background-color: #f7f7f7;
-    height: 180px;
-    width: 300px;
+    height: 100px;
+    width: 200px;
     text-align: center;
     color: #555;
 }
