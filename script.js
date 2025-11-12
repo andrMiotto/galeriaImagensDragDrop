@@ -7,7 +7,7 @@ const dropzones = document.querySelectorAll('.card-drop');
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', event => {
         event.dataTransfer.setData('text/plain', event.target.innerText);
-        event.target.classList.add('draggin');
+        event.target.classList.add('dragging');
         console.log('drag iniciado: ', event.target.innerText);
     });
 
@@ -37,9 +37,9 @@ dropzones.forEach(dropzone => {
             event.preventDefault();
             dropzone.classList.remove('over');
 
-            const dragging = document.querySelector('.dragging');
+    const dragging = document.querySelector('.dragging'); 
             if (dragging) {
-                dropzone.innerHTML = '';
+      dropzone.innerHTML = ''; 
                 dropzone.appendChild(dragging);
                 console.log('Elemento solto na área de drop');
             }
