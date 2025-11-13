@@ -1,5 +1,6 @@
 const draggables = document.querySelectorAll('.card');
 const dropzones = document.querySelectorAll('.card-drop');
+const card = document.querySelector('.card');
 
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', event => {
@@ -12,6 +13,8 @@ draggables.forEach(draggable => {
 });
 
 dropzones.forEach(dropzone => {
+    const htmlOriginal = dropzone.innerHTML;
+
     dropzone.addEventListener('dragover', event => {
         event.preventDefault();
         dropzone.classList.add('over');
@@ -31,6 +34,17 @@ dropzones.forEach(dropzone => {
             const clone = dragging.cloneNode(true);
             clone.classList.remove('dragging');
             dropzone.appendChild(clone);
+
+
+            clone.addEventListener('click', () => {
+                clone.remove();
+                dropzone.innerHTML = htmlOriginal;
+            })
+
         }
     });
 });
+
+card.addEventListener('click', () => {
+
+})
