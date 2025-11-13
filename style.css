@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto Mono", monospace;
+
+}
+
+.content,
+.content * {
+    box-sizing: content-box;
+}
+
+
+.drag-the-image,
+.drag-the-image * {
+    margin-bottom: 0px;
 }
 
 #header {
@@ -16,7 +31,7 @@
 
 .content {
     background-color: rgb(250, 249, 246);
-    padding-bottom: 0.75rem;
+    padding-bottom: 4rem;
 }
 
 .title-content {
@@ -50,7 +65,7 @@ h2 {
 .favorites-drop {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
- 
+
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
@@ -67,7 +82,7 @@ h2 {
 
 .img-album {
     width: 12.5rem;
- 
+
     height: 6.25rem;
     object-fit: cover;
     border-radius: 0.5rem;
@@ -101,4 +116,13 @@ h2 {
     transform: scale(1.03);
     background-color: #fff4f4;
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    background-color: rgb(109, 7, 7);
+    color: #ffffff;
 }
